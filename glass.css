@@ -1,0 +1,246 @@
+
+/*公有样式设置*/
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font:12px/1.5 "Arial";
+	color:#666;
+}
+ul,li{
+	list-style-type:none;
+	display:inline-block;
+}
+ul{
+	font-size:0;
+}
+li{
+	font-size:12px;
+}
+img{
+	display:block;
+}
+/*container*/
+#container{
+	width:900px;
+	height:526px;
+	margin:10px auto;
+	padding:10px;
+	border:8px solid #b7b7b7;
+	border-radius:5px;
+	position:relative;
+}
+/*载入画面*/
+#load{
+	position:relative;
+	top:50%;
+	margin-top:-12px;
+	font-size:0;
+}
+#load.disappear{
+	display:none;
+}
+#load .loading{
+	font-size:16px;
+	text-align:center;
+}
+#load .progress-bar{
+	width:200px;
+	height:12px;
+	margin:auto;
+	padding:3px;
+	border-radius:12px;
+	background-color:#666;
+}
+#load .download{
+	display:inline;
+	float:left;
+	width:0%;
+	height:100%;
+	border-radius:12px;
+	background-color:#5CACEE;
+}
+/*大图*/
+#selected-photo{
+	display:inline-block;
+	float:left;
+	box-shadow:0 0 15px #bbb;
+}
+#selected-photo.disappear{
+	display:none;
+}
+#selected-photo .esc{
+	position:absolute;
+	display:inline;
+	width:24px;
+	height:24px;
+	left:394px;
+	top:20px;
+	text-align:center;
+	font-size:16px;
+	color:#707070;
+	background-color:#eee;
+	font-weight:700;
+	border-radius:12px;
+	cursor:pointer;
+}
+#selected-photo .esc:hover{
+	color:#eee;
+	background-color:#707070;
+}
+#selected-photo	img{
+	display:block;
+}
+#selected-photo .big-glass{
+	position:absolute;
+	top:150px;
+	left:80px;
+	cursor:move;
+}
+/*左侧头像选择区*/
+#photo{
+	display:inline-block;
+	float:left;
+	width:428px;
+	height:100%;
+}
+#photo.disappear{
+	display:none;
+}
+#photo .source li{
+	margin-right:10px;
+	padding:5px 10px 5px 30px;
+	font-weight:700;
+	border:1px solid #d4d4d4;
+	border-radius:5px 5px 0 0;
+	background-color:#efefef;
+	background-image:url(img/ico.gif);
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+#photo .source li:hover{
+	background-color:#f6f6f6;
+}
+#photo .source li.current{
+	color:#267301;
+	background-color:#fff;
+	border-bottom-color:#fff;
+	cursor:text;
+}
+#photo .source li.ico-1{
+	background-position:10px 6px;
+}
+#photo .source li.ico-2{
+	background-position:10px -33px;
+}
+#photo .source li.ico-3{
+	background-position:10px -73px;
+}
+#photo .modelshapes,#photo .myphotoshapes,#photo .internetshapes{
+	padding:10px;
+	margin-top:-1px;
+	height:476px;
+	border:1px solid #d4d4d4;
+	border-radius:0 5px 5px 5px;
+}
+#photo .modelshapes.disappear,#photo .myphotoshapes.disappear,#photo .internetshapes.disappear{
+	display:none;
+}
+#photo .shape-menu{
+	padding:0 10px 10px 10px;
+}
+#photo .shape-menu li{
+	cursor:pointer;
+	padding:4px 10px;
+	border-radius:5px;
+}
+#photo .shape-menu li:hover{
+	background-color:#cfc;
+}
+#photo .shape-menu li.current,#photo .shape-menu li.current:hover{
+	color:#fff;
+	background-color:#267301;
+	font-weight:700;
+	cursor:text;
+}
+#photo .photos-small{
+	padding:10px;
+}
+#photo .photos-small li{
+	display:inline-block;
+	margin:0 14px 44px 0px;
+	border:1px solid #eee;
+}
+#photo .photos-small li:hover{
+	cursor:pointer;
+	border-color:#9c9;
+	box-shadow:0 0 15px #9c9;
+}
+/*右侧眼镜选择区*/
+#glass{
+	display:inline-block;
+	float:left;
+	width:428px;
+	height:100%;
+	padding:0 20px;
+}
+#glass.disappear{
+	display:none;
+}
+#glass .style-menu{
+	padding:10px;
+	border:1px solid #bbb;
+	border-radius:5px;
+	color:#666;
+	font:12px/1.5 "Arial";
+	box-shadow:0 0 15px #bbb;
+}
+	
+#glass .style-menu select{
+	width:100px;
+	height:22px;
+	margin:5px 10px 5px 0;
+	border-radius:5px;
+	cursor:pointer;
+	color:#000;
+	font:12px/1.5 "Arial";
+}
+#glass .style-menu select:hover{
+	background-color:#f6f6f6;
+}
+#glass .style-menu button{
+	padding:0 10px;
+	border-radius:5px;
+	cursor:pointer;
+	color:#666;
+	font:12px/1.5 "Arial";
+}
+#glass .style-menu button:hover{
+	background-color:#eee;
+}
+#glass .glasses li div{
+	text-align:center;
+	padding:12px 11px 11px 0;
+}
+#glass .glasses li{
+	border-bottom:1px dotted #666;
+}
+#glass .glasses img{
+	cursor:pointer;
+	margin-bottom:5px;
+}
+#glass .glasses span{
+	cursor:default;
+}
+#glass .glasses img:hover{
+	border-radius:5px;
+	box-shadow:0 0 15px #9c9;
+}
+#glass .glasses img.current{
+	border-radius:5px;
+	box-shadow:0 0 15px #f88;
+}
+#glass .glasses span.differ{
+	color:#080;
+}

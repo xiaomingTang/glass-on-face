@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="tang" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<title>insert title</title>
+
+	<link rel="shortcut icon" type="image/ico" href="E:\\tang\ico\icon_head2.ico" />
+	<link rel="stylesheet" type="text/css" href="glass.css" />
+</head>
+<body>
+	<div id="container">
+		<!--载入画面-->
+		<div id="load" class="current">
+			<div class="load">
+				<div class="loading">数据载入中...<span class="percent">0</span>%</div>
+				<div class="progress-bar">
+					<div class="download"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			function $(id){
+				return document.getElementById(id);
+			};
+			(function(){
+				var percent=$("load").getElementsByClassName("percent")[0],
+					num=0,
+					load=null;
+				load=setInterval(function(){
+					num=parseInt(percent.innerHTML);
+					if(num<80){
+						percent.innerHTML=++num;
+						$("load").getElementsByClassName("download")[0].style.width=num*2+"px";
+					}
+					else{
+						clearInterval(load);
+						waiting();
+					}
+				},100);
+			})();
+			//等待加载时的小游戏
+			function waiting(){
+				return false;
+			}
+		</script>
+		<!--大图-->
+		<div id="selected-photo" class="disappear">
+			<div class="esc">X</div>
+			<div><img src="E:\tang\fgm\glass\models_big\big_1.jpg" /></div>
+			<div class="big-glass" draggable="true" style="position:absolute;top:164px;left:62px"><img src="glass_on_face\glass_6.png" /></div>
+		</div>
+		<!--左边头像选择区-->
+		<div id="photo" class="disappear">
+			<div class="source">
+				<ul>
+					<li class="current model ico-1">模特试镜</li>
+					<li class="myphoto ico-2">我的相片</li>
+					<li class="internet ico-3">网络图片</li>
+				</ul>
+			</div>
+			<div class="modelshapes current">
+				<div class="shape-menu">
+					<ul>
+						<li class="all current">全 部</li>
+						<li class="elli">椭圆脸</li>
+						<li class="circle">圆型脸</li>
+						<li class="rect">长型脸</li>
+						<li class="square">方型脸</li>
+						<li class="seed">瓜子脸</li>
+						<li class="heart">心型脸</li>
+					</ul>
+				</div>
+				<div class="photos-small">
+					<ul>
+						<li><img src="models\model_1.jpg" class="elli male" /></li>
+						<li><img src="models\model_2.jpg" class="circle male" /></li>
+						<li><img src="models\model_3.jpg" class="elli female" /></li>
+						<li><img src="models\model_4.jpg" class="circle female" /></li>
+						<li><img src="models\model_5.jpg" class="rect male" /></li>
+						<li><img src="models\model_6.jpg" class="square male" /></li>
+						<li><img src="models\model_7.jpg" class="rect male" /></li>
+						<li><img src="models\model_8.jpg" class="seed male" /></li>
+						<li><img src="models\model_9.jpg" class="heart male" /></li>
+						<li><img src="models\model_10.jpg" class="square female" /></li>
+						<li><img src="models\model_11.jpg" class="heart female" /></li>
+						<li><img src="models\model_12.jpg" class="seed female" /></li>
+					</ul>
+				</div>
+			</div>
+			<div class="myphotoshapes disappear"></div>
+			<div class="internetshapes disappear"></div>
+		</div>
+		<!--右边眼镜选择区-->
+		<div id="glass" class="disappear">
+			<div class="style-menu">
+				<select class="brand">
+					<option disabled="disabled" selected="selected" value="0">品牌</option>
+					<option value="all">全部</option>
+					<option value="brand_ztyh">佐藤樱花</option>
+					<option value="brand_bjs">毕加索</option>
+					<option value="brand_smzy">沙漠之鹰</option>
+					<option value="brand_bfx">蝙蝠侠</option>
+				</select>
+				<select id="sexual">
+					<option disabled="disabled" selected="selected" value="0">男/女款</option>
+					<option value="all">全部</option>
+					<option value="sexual_male">男款</option>
+					<option value="sexual_female">女款</option>
+				</select>
+				<select id="size">
+					<option disabled="disabled" selected="selected" value="0">尺码</option>
+					<option value="all">全部</option>
+					<option value="size_s">40-49(小码)</option>
+					<option value="size_m">50-59(中码)</option>
+					<option value="size_l">60-69(大码)</option>
+				</select>
+				<button class="search">搜索</button>
+				<select id="rim">
+					<option disabled="disabled" selected="selected" value="0">框型</option>
+					<option value="all">全部</option>
+					<option value="rim_full">全框</option>
+					<option value="rim_half">半框</option>
+					<option value="rim_less">无框</option>
+					<option value="rim_brow">眉框</option>
+				</select>
+				<select id="material">
+					<option disabled="disabled" selected="selected" value="0">材质</option>
+					<option value="all">全部</option>
+					<option value="material_metal">金属合金</option>
+					<option value="material_plate">板材镜架</option>
+					<option value="material_iron">铁架系列</option>
+					<option value="material_ti">钛架系列</option>
+					<option value="material_memory">记忆镜架</option>
+				</select>
+				<select id="price">
+					<option disabled="disabled" selected="selected" value="0">价格</option>
+					<option value="all">全部</option>
+					<option value="price_50-">50以下</option>
+					<option value="price_100-">50-100</option>
+					<option value="price_150-">100-150</option>
+					<option value="price_200-">150-200</option>
+					<option value="price_300-">200-300</option>
+					<option value="price_300+">300以上</option>
+				</select>
+				<button class="reset">重置</button>
+			</div>
+			<div class="glasses">
+				<ul>
+					<li><div><img src="glass_for_preview\glass_1.jpg" class="all brand_ztyh sexual_male" /><span><span class="differ">佐藤樱花_ZTYH-001</span><br />豹纹色</span></div></li>
+					<li><div><img src="glass_for_preview\glass_2.jpg" class="all brand_ztyh sexual_male" /><span><span class="differ">佐藤樱花_ZTYH-010</span><br />蓝色</span></div></li>
+					<li><div><img src="glass_for_preview\glass_3.jpg" class="all brand_bjs sexual_male" /><span><span class="differ">毕加索_55-2062 C6</span><br />绅士黑</span></div></li>
+					<li><div><img src="glass_for_preview\glass_4.jpg" class="all brand_bjs sexual_male" /><span><span class="differ">毕加索_55-2001 C6</span><br />绅士黑</span></div></li>
+					<li><div><img src="glass_for_preview\glass_5.jpg" class="all brand_bjs sexual_female" /><span><span class="differ">毕加索_55-2068 C11</span><br />荧光红</span></div></li>
+					<li><div><img src="glass_for_preview\glass_6.jpg" class="all brand_bjs sexual_female" /><span><span class="differ">毕加索_55-2051 C11</span><br />荧光红</span></div></li>
+					<li><div><img src="glass_for_preview\glass_7.jpg" class="all brand_smzy sexual_male" /><span><span class="differ">沙漠之鹰_R5152 C16</span><br />绅士黑</span></div></li>
+					<li><div><img src="glass_for_preview\glass_8.jpg" class="all brand_smzy sexual_male" /><span><span class="differ">沙漠之鹰_R5152 CCG</span><br />绅士银</span></div></li>
+					<li><div><img src="glass_for_preview\glass_9.jpg" class="all brand_smzy sexual_male" /><span><span class="differ">沙漠之鹰_R5137 C16</span><br />绅士黑</span></div></li>
+					<li><div><img src="glass_for_preview\glass_10.jpg" class="all brand_bfx sexual_male" /><span><span class="differ">蝙蝠侠_RBM95002 C9D</span><br />绅士黑</span></div></li>
+					<li><div><img src="glass_for_preview\glass_11.jpg" class="all brand_bfx sexual_male" /><span><span class="differ">蝙蝠侠_RBM97004 B6</span><br />绅士银</span></div></li>
+					<li><div><img src="glass_for_preview\glass_12.jpg" class="all brand_bfx sexual_male" /><span><span class="differ">蝙蝠侠_RBM97004 B1</span><br />透明黑</span></div></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="glass.js"></script>
+</body>
+</html>
