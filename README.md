@@ -1,3 +1,3 @@
-# glass-on-face
-# www.fgm.cc/learn/ 中的眼镜试戴
-https://xiaomingTang.github.io/glass-on-face/
+# 眼镜试戴
+[直通车](https://xiaomingTang.github.io/glass-on-face/)  
+案例源自[实例索引](www.fgm.cc/learn/)
